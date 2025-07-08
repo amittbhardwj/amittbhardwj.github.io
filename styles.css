@@ -1,0 +1,146 @@
+/* Portfolio Styles */
+body {
+    font-family: 'Anonymous Pro', monospace;
+}
+.section-title {
+    @apply text-4xl font-extrabold text-white mb-2 text-center relative pb-4;
+}
+.section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 w-28 h-1.5 bg-indigo-500;
+    transform: translateX(-50%);
+}
+.project-card, .skill-card {
+        @apply bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300;
+}
+
+/* CV Modal Styles */
+#cv-modal-backdrop {
+    transition: opacity 0.3s ease-in-out;
+}
+.cv-body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+    color: #334155;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+.cv-container {
+    max-width: 850px;
+    margin: 3rem auto; /* Increased margin for more space */
+    padding: 2.5rem; /* Increased padding */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+.cv-container h1 {
+    color: #1e3a8a;
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.cv-container h2 {
+    color: #2563eb;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #bfdbfe;
+    padding-bottom: 0.15rem;
+}
+.cv-container h3 {
+    color: #1d4ed8;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    margin-bottom: 0.15rem;
+}
+.cv-container .contact-info a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.cv-container .contact-info a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+.cv-container .contact-item {
+    display: inline-flex;
+    align-items: center;
+}
+.cv-container .contact-item i {
+    margin-right: 0.35rem;
+    color: #64748b;
+}
+.cv-container ul {
+    list-style-type: disc;
+    margin-left: 1rem;
+    padding-left: 0;
+    margin-top: 0.15rem;
+}
+.cv-container li {
+    margin-bottom: 0.15rem;
+}
+.cv-container .job-details {
+    font-weight: 500;
+    color: #475569;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+.cv-container .skill-category span {
+    font-weight: 600;
+    color: #1e3a8a;
+}
+.cv-container .experience-item + .experience-item {
+    margin-top: 1rem;
+}
+
+/* Light Mode Styles */
+html:not(.dark) body {
+    @apply bg-gray-100 text-gray-800;
+}
+
+html:not(.dark) .section-title {
+    @apply text-gray-900;
+}
+
+html:not(.dark) .project-card, html:not(.dark) .skill-card {
+    @apply bg-white;
+}
+
+html:not(.dark) #projects, html:not(.dark) #contact {
+    @apply bg-gray-200;
+}
+
+html:not(.dark) header {
+    @apply bg-gray-100/80;
+}
+
+html:not(.dark) a {
+    @apply text-gray-800;
+}
+
+html:not(.dark) .text-white {
+    @apply text-gray-900;
+}
+
+html:not(.dark) .text-gray-300 {
+    @apply text-gray-700;
+}
+
+html:not(.dark) .text-gray-400 {
+    @apply text-gray-600;
+}
+
+html:not(.dark) .bg-gray-700 {
+    @apply bg-gray-300;
+}
+
+html:not(.dark) .bg-gray-800 {
+    @apply bg-gray-200;
+}
+
+html:not(.dark) .hover\:text-indigo-400:hover {
+    @apply text-indigo-600;
+}
